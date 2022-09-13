@@ -7,7 +7,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
-	state.Weapons:options('Montante','Anguta')
+	state.Weapons:options('Caladbolg','Apocalypse')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
@@ -325,7 +325,7 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
 	-- Weapons sets
-	sets.weapons.Montante = {main="Montante +1",sub="Utu Grip"}
-	sets.weapons.Anguta = {main="Anguta",sub="Utu Grip"}
+	sets.weapons.Caladbolg = {main="Caladbolg",sub="Utu Grip"}
+	sets.weapons.Apocalypse = {main="Apocalypse",sub="Utu Grip"}
 	
     end
