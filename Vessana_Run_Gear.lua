@@ -1,7 +1,7 @@
 function user_job_setup()
 
 	state.OffenseMode:options('Normal','SomeAcc','Acc','HighAcc','FullAcc')
-	state.HybridMode:options('Normal','DTLite','Tank')
+	state.HybridMode:options('Tank','DTLite','Normal')
 	state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','HighAcc','FullAcc')
 	state.CastingMode:options('Normal','SIRD')
 	state.PhysicalDefenseMode:options('PDT_HP','PDT')
@@ -12,9 +12,9 @@ function user_job_setup()
 	
 	state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP'}
 
-	gear.enmity_jse_back = {name="Ogma's cape",augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}}
-	gear.stp_jse_back = {name="Ogma's cape",augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}}
-	gear.da_jse_back = {name="Ogma's cape",augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	gear.enmity_jse_back = {name="Ogma's cape",augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken -10%',}}
+	gear.stp_jse_back = gear.enmity_jse_back --{name="Ogma's cape",augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}}
+	gear.da_jse_back = gear.enmity_jse_back --{name="Ogma's cape",augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
 
 	-- Additional local binds
 	send_command('bind !` gs c SubJobEnmity')
@@ -35,29 +35,30 @@ function user_job_setup()
 	send_command('bind ^@!` gs c cycle SkillchainMode')
 	send_command('bind !r gs c weapons Lionheart;gs c update')
 	
-	select_default_macro_book()
+	windower.chat.input('/lockstyleset 013')
+	
 end
 
 function init_gear_sets()
 
-    sets.Enmity = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
-	     head="Fu. Bandeau +1",neck="Unmoving Collar +1",ear1="Friomisi Earring",ear2="Trux Earring",
-	     body="Emet Harness +1",hands="Kurys Gloves",ring1="Petrov Ring",ring2="Vengeful Ring",
+    sets.Enmity = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum",
+	     head="Fu. Bandeau +3",neck="Futhark Torque +1",ear1="Friomisi Earring",ear2="Trux Earring",
+	     body="Futhark Coat +3",hands="Kurys Gloves",ring1="Petrov Ring",ring2="Vengeful Ring",
 		 back=gear.enmity_jse_back,waist="Goading Belt",legs="Eri. Leg Guards +1",feet="Ahosi Leggings"}
 		 
     sets.Enmity.SIRD = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
 		head="Meghanada Visor +2",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Trux Earring",
-		body="Emet Harness +1",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Moonlight Ring",
+		body="Futhark Coat +3",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Moonlight Ring",
 		back=gear.enmity_jse_back,waist="Audumbla Sash",legs="Carmine Cuisses +1",feet="Erilaz Greaves +1"}
 		
     sets.Enmity.SIRDT = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
         head="Fu. Bandeau +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-        body="Runeist's Coat +3",hands="Nyame Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
+        body="Futhark Coat +3",hands="Nyame Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
         back="Moonlight Cape",waist="Audumbla Sash",legs="Carmine Cuisses +1",feet="Erilaz Greaves +1"}
 
     sets.Enmity.DT = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
-        head="Fu. Bandeau +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-        body="Runeist's Coat +3",hands="Nyame Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
+        head="Fu. Bandeau +3",neck="Futhark Torque +1",ear1="Odnowa Earring +1",ear2="Genmei Earring",
+        body="Futhark Coat +3",hands="Nyame Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
 		
 	--------------------------------------
@@ -253,9 +254,9 @@ function init_gear_sets()
 	sets.resting = {}
 
     sets.idle = {main="Aettir",sub="Utu Grip",ammo="Homiliary",
-		head="Rawhide Mask",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-		body="Runeist's Coat +3",hands=gear.herculean_refresh_hands,ring1="Stikini Ring +1",ring2="Stikini Ring +1",
-		back="Moonlight Cape",waist="Flume Belt +1",legs="Rawhide Trousers",feet=gear.herculean_refresh_feet}
+		head="Turms Cap +1",neck="Futhark Torque +1",ear1="Genmei Earring",ear2="Odnowa Earring +1",
+		body="Turms Harness",hands="Turms Mittens +1",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
+		back=gear.enmity_jse_back,waist="Flume Belt +1",legs="Turms Subligar",feet="Turms Leggings"}
 		
     sets.idle.Sphere = set_combine(sets.idle,{body="Mekosu. Harness"})
 			
@@ -392,9 +393,9 @@ function init_gear_sets()
             body="Ayanmo Corazza +2",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Patricius Ring",
             back="Moonlight Cape",waist="Olseni Belt",legs="Meg. Chausses +2",feet="Ahosi Leggings"}
     sets.engaged.Tank = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
-            head="Meghanada Visor +2",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-            body="Futhark Coat +1",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Shadow Ring",
-            back="Shadow Mantle",waist="Engraved Belt",legs="Nyame Flanchard",feet="Erilaz Greaves +1"}
+            head="Turms Cap +1",neck="Futhark Torque +1",ear1="Genmei Earring",ear2="Odnowa Earring +1",
+            body="Futhark Coat +3",hands="Turms Mittens +1",ring1="Defending Ring",ring2="Moonbeam Ring",
+            back=gear.enmity_jse_back,waist="Flume Belt +1",legs="Eri. Leg Guard +1",feet="Turms Leggings"}
 	sets.engaged.Tank_HP = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
         head="Fu. Bandeau +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
         body="Runeist's Coat +3",hands="Nyame Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
@@ -412,30 +413,6 @@ function init_gear_sets()
 	sets.buff.Battuta = {hands="Turms Mittens +1"}
 	sets.buff.Embolden = {back="Evasionist's Cape"}
 	
-end
-
--- Select default macro book on initial load or subjob change.
-function select_default_macro_book()
-	-- Default macro set/book
-	if player.sub_job == 'DNC' then
-		set_macro_page(4, 19)
-	elseif player.sub_job == 'RDM' then
-		set_macro_page(5, 19)
-	elseif player.sub_job == 'SCH' then
-		set_macro_page(5, 19)
-	elseif player.sub_job == 'BLU' then
-		set_macro_page(6, 19)
-	elseif player.sub_job == 'WAR' then
-		set_macro_page(7, 19)
-	elseif player.sub_job == 'SAM' then
-		set_macro_page(8, 19)
-	elseif player.sub_job == 'DRK' then
-		set_macro_page(9, 19)
-	elseif player.sub_job == 'NIN' then
-		set_macro_page(10, 19)
-	else
-		set_macro_page(5, 19)
-	end
 end
 
 --Job Specific Trust Overwrite
@@ -473,12 +450,4 @@ function check_trust()
 		end
 	end
 	return false
-end
-
-function user_job_lockstyle()
-	if state.Weapons.value == 'Lionheart' then
-		windower.chat.input('/lockstyleset 034')
-	else
-		windower.chat.input('/lockstyleset 033')
-	end
 end
