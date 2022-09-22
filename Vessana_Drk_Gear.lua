@@ -73,7 +73,7 @@ function init_gear_sets()
 		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
 		back="Toro Cape",waist="Eschan Stone",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
 		   
-	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {ear1="Odnowa Earring +1",head="Ratri Sallet +1",hands="Ratri Gadlings +1",feet="Ratri Sollerets"})
+	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {body="Heathen's Cuirass +1",ear1="Odnowa Earring +1",head="Ratri Sallet +1",hands="Ratri Gadlings +1",feet="Ratri Sollerets"})
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], {back="Ankou's Mantle"})
            
 	sets.midcast.Stun = {ammo="Pemphredo Tathlum",
@@ -100,7 +100,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Knobkierrie",
 		head="Crepuscular Helm",neck="Fotia Gorget",ear1="Thrud Earring",ear2="Moonshade Earring",
-		body="Ignominy Cuirass +2",hands="Sakpata's Gauntlets",ring1="Vehemence Ring",ring2="Niqmaddu Ring",
+		body="Ignominy Cuirass +2",hands="Sakpata's Gauntlets",ring1="Shukuyu Ring",ring2="Niqmaddu Ring",
 		back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 		waist="Fotia Belt",legs="Fall. Flanchard +3",feet="Sulev. Leggings +2"}
 
@@ -110,13 +110,14 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
-    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {head="Ratri Sallet +1",neck="Abyssal Beads +2",hands="Rat. Gadlings +1",waist="Sailfi Belt +1",ear2="Ishvara Earring"})
+    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {head="Ratri Sallet +1",neck="Abyssal Beads +2",hands="Rat. Gadlings +1",waist="Sailfi Belt +1",ear2="Ishvara Earring",
+		waist="Sailfi Belt +1"})
     sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
-    sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {ring1="Titan Ring +1",ear1="Thrud Earring",head="Sakpata's Helm"})
+    sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {neck="Abyssal Beads +2",ring1="Titan Ring +1",waist="Sailfi Belt +1",head="Sakpata's Helm"})
     sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
