@@ -50,7 +50,7 @@ function init_gear_sets()
 
 	sets.precast.FC = {ammo="Impatiens",
 		head="Carmine Mask +1",neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Malignance Earring",
-		body="Odyss. Chestplate",hands="Leyline Gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+		body="Fall. Cuirass +3",hands="Leyline Gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
 		back="Moonlight Cape",waist="Flume Belt +1",legs="Eschite Cuisses",feet="Odyssean Greaves"}
 
 	sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
@@ -65,7 +65,7 @@ function init_gear_sets()
  
 	sets.midcast['Dark Magic'] = {ammo="Pemphredo Tathlum",
 		head="Igno. Burgeonet +1",neck="Erra Pendant",ear1="Digni. Earring",ear2="Malignance Earring",
-		body="Carm. Sc. Mail +1",hands="Flam. Manopolas +2",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
+		body="Carm. Sc. Mail +1",hands="Fall. Fin. Gaunt. +3",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
 		back="Toro Cape",waist="Eschan Stone",legs="Eschite Cuisses",feet="Flam. Gambieras +2"}
            
 	sets.midcast['Enfeebling Magic'] = {ammo="Pemphredo Tathlum",
@@ -73,15 +73,16 @@ function init_gear_sets()
 		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
 		back="Toro Cape",waist="Eschan Stone",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
 		   
-	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {})
+	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {ear1="Odnowa Earring +1",head="Ratri Sallet +1",hands="Ratri Gadlings +1",feet="Ratri Sollerets"})
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], {back="Ankou's Mantle"})
            
 	sets.midcast.Stun = {ammo="Pemphredo Tathlum",
-		head="Carmine Mask +1",neck="Erra Pendant",ear1="Digni. Earring",ear2="Malignance Earring",
-		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
-		back="Toro Cape",waist="Eschan Stone",legs="Eschite Cuisses",feet="Flam. Gambieras +2"}
+		head="Carmine Mask +1",neck="Erra Pendant",ear1="Enchntr. Earring +1",ear2="Malignance Earring",
+		body="Fall. Cuirass +3",hands="Fall. Fin. Gaunt. +3",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
+		back="Toro Cape",waist="Eschan Stone",legs="Eschite Cuisses",feet="Ratri Sollerets"}
                    
-	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {ring1="Evanescence Ring",ring2="Archon Ring",back="Niht Mantle"})
+	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {head="Pixie Hairpin +1",hands="Fall. Fin. Gaunt. +3",waist="Orpheus's Sash",legs="Fall. Flanchard +3",
+		feet="Ratri sollerets",ring1="Evanescence Ring",ring2="Archon Ring",back="Niht Mantle"})
 	
 	sets.DrainWeapon = {}--{main="Misanthropy",sub="Alber Strap"}
                    
@@ -98,7 +99,7 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Knobkierrie",
-		head="Crepuscular Helm",neck="Fotia Gorget",ear1="Ishvara Earring",ear2="Moonshade Earring",
+		head="Crepuscular Helm",neck="Fotia Gorget",ear1="Thrud Earring",ear2="Moonshade Earring",
 		body="Ignominy Cuirass +2",hands="Sakpata's Gauntlets",ring1="Vehemence Ring",ring2="Niqmaddu Ring",
 		back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 		waist="Fotia Belt",legs="Fall. Flanchard +3",feet="Sulev. Leggings +2"}
@@ -109,7 +110,7 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
-    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {head="Ratri Sallet +1",neck="Abyssal Beads +2",hands="Rat. Gadlings +1",waist="Grunfeld Rope"})
+    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {head="Ratri Sallet +1",neck="Abyssal Beads +2",hands="Rat. Gadlings +1",waist="Sailfi Belt +1",ear2="Ishvara Earring"})
     sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
