@@ -66,7 +66,7 @@ function init_gear_sets()
     sets.precast.FoldDoubleBust = {hands="Lanun Gants +1"}
 
     sets.precast.CorsairRoll = {main="Rostam",range="Compensator",
-        head="Lanun Tricorne +1",neck="Regal Necklace",
+        head="Lanun Tricorne +3",neck="Regal Necklace",
         body="Lanun Frac +3",hands="Chasseur's Gants +2",ring1="Defending Ring",
         back=gear.tp_jse_back,waist="Flume Belt +1",legs="Desultor Tassets",feet="Malignance Boots"}
 
