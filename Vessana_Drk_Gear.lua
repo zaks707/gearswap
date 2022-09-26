@@ -110,7 +110,7 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
-    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {head="Ratri Sallet +1",neck="Abyssal Beads +2",hands="Rat. Gadlings +1",waist="Sailfi Belt +1",ear2="Ishvara Earring",
+    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {head="Ratri Sallet +1",neck="Abyssal Beads +2",hands="Rat. Gadlings +1",waist="Sailfi Belt +1",ear2="Lugra Earring +1",
 		waist="Sailfi Belt +1"})
     sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
