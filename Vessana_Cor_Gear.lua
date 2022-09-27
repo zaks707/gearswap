@@ -21,9 +21,9 @@ function user_job_setup()
 	gear.tp_jse_back = {name="Camulus's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	gear.tp_ranger_jse_back = gear.tp_jse_back --{name="Camulus's Mantle",augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}}
 	gear.snapshot_jse_back = gear.tp_jse_back --{name="Camulus's Mantle",augments={'"Snapshot"+10',}}
-	gear.str_wsd_jse_back = {name="Camulus's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
-	gear.ranger_wsd_jse_back = gear.str_wsd_jse_back --{name="Camulus's Mantle",augments={'AGI+20','RAcc+20 RAtt+20','AGI +10','Weapon skill damage +10%',}}
-	gear.magic_wsd_jse_back = gear.str_wsd_jse_back --{name="Camulus's Mantle",augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
+	gear.str_wsd_jse_back = {name="Camulus's Mantle",augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+	gear.magic_wsd_jse_back = {name="Camulus's Mantle",augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage+10','Weapon skill damage +10%',}}
+	gear.ranger_wsd_jse_back = gear.magic_wsd_jse_back --{name="Camulus's Mantle",augments={'AGI+20','RAcc+20 RAtt+20','AGI +10','Weapon skill damage +10%',}}
 
     -- Additional local binds
 	send_command('bind ^` gs c cycle ElementalMode')
@@ -103,10 +103,10 @@ function init_gear_sets()
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
         head="Carmine Mask +1",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body=gear.herculean_waltz_body,hands=gear.herculean_waltz_hands,ring1="Defending Ring",ring2="Valseur's Ring",
+        body=gear.herculean_waltz_body,hands="Slither Gloves +1",ring1="Defending Ring",ring2="Valseur's Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Dashing Subligar",feet=gear.herculean_waltz_feet}
 		
-	sets.Self_Waltz = {head="Mummu Bonnet +2",body="Passion Jacket",ring1="Asklepian Ring"}
+	sets.Self_Waltz = {head="Mummu Bonnet +1",body="Passion Jacket",ring1="Asklepian Ring"}
         
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
@@ -125,7 +125,7 @@ function init_gear_sets()
     sets.precast.RA = {ammo=gear.RAbullet,
         head="Chass. Tricorne +1",
         body="Laksa. Frac +2",hands="Carmine Fin. Ga. +1",ring1="Crepuscular Ring",
-        back=gear.snapshot_jse_back,waist="Impulse Belt",legs="Laksa. Trews +3",feet="Meg. Jam. +2"}
+        back=gear.snapshot_jse_back,waist="Impulse Belt",legs="Laksa. Trews +3",feet="Meg. Jam. +1"}
 		
 	sets.precast.RA.Flurry = set_combine(sets.precast.RA, {})
 	sets.precast.RA.Flurry2 = set_combine(sets.precast.RA, {})
@@ -134,13 +134,13 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        head="Meghanada Visor +1",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Telos Earring",
+        head="Meghanada Visor +2",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Telos Earring",
         body="Laksa. Frac +2",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Ifrit Ring +1",
         back=gear.str_wsd_jse_back,waist="Fotia Belt",legs="Meg. Chausses +2",feet="Lanun Bottes +3"}
 		
     sets.precast.WS.Acc = {
         head="Carmine Mask +1",neck="Combatant's Torque",ear1="Digni. Earring",ear2="Telos Earring",
-        body="Meg. Cuirie +2",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Ilabrat Ring",
+        body="Meg. Cuirie +1",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Ilabrat Ring",
         back=gear.str_wsd_jse_back,waist="Grunfeld Rope",legs="Carmine Cuisses +1",feet="Lanun Bottes +3"}		
 		
     sets.precast.WS.Proc = {
@@ -153,13 +153,13 @@ function init_gear_sets()
     sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {head="Carmine Mask +1",ring2="Rufescent Ring",legs="Carmine Cuisses +1",feet="Carmine Greaves +1"})
 
 	sets.precast.WS['Savage Blade'] = {ammo=gear.WSbullet,
-        head="Meghanada Visor +1",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
+        head="Meghanada Visor +2",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
         body="Laksa. Frac +2",hands="Meg. Gloves +2",ring1="Shukuyu Ring",ring2="Vehemence Ring",
         back=gear.str_wsd_jse_back,waist="Sailfi Belt +1",legs="Meg. Chausses +2",feet="Lanun Bottes +3"}
 
     sets.precast.WS['Savage Blade'].Acc = {ammo=gear.WSbullet,
         head="Carmine Mask +1",neck="Caro Necklace",ear1="Moonshade Earring",ear2="Telos Earring",
-        body="Meg. Cuirie +2",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Rufescent Ring",
+        body="Meg. Cuirie +1",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Rufescent Ring",
         back=gear.str_wsd_jse_back,waist="Grunfeld Rope",legs="Carmine Cuisses +1",feet="Lanun Bottes +3"}
 	
     sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
@@ -192,11 +192,6 @@ function init_gear_sets()
         head="Malignance Chapeau",neck="Comm. Charm +2",ear1="Moonshade Earring",ear2="Friomisi Earring",
         body="Laksa. Frac +3",hands="Carmine Fin. Ga. +1",ring1="Garuda Ring",ring2="Dingir Ring",
         back=gear.magic_wsd_jse_back,waist="Eschan Stone",legs="Shned. Tights +1",feet="Lanun Bottes +3"}
-
-    sets.precast.WS['Wildfire'].Acc = {ammo=gear.MAbullet,
-        head=gear.herculean_nuke_head,neck="Sanctity Necklace",ear1="Crematio Earring",ear2="Friomisi Earring",
-        body="Laksa. Frac +3",hands="Leyline Gloves",ring1="Regal Ring",ring2="Dingir Ring",
-        back=gear.magic_wsd_jse_back,waist="Eschan Stone",legs="Laksa. Trews +3",feet="Lanun Bottes +3"}
 		
     sets.precast.WS['Hot Shot'] = sets.precast.WS['Wildfire']
     sets.precast.WS['Hot Shot'].Acc = sets.precast.WS['Wildfire'].Acc
@@ -204,8 +199,8 @@ function init_gear_sets()
 		--Because omen skillchains.
     sets.precast.WS['Burning Blade'] = {ammo=gear.RAbullet,
         head="Meghanada Visor +2",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Sanare Earring",
-        body="Meg. Cuirie +2",hands="Malignance Gloves",ring1="Defending Ring",ring2="Dark Ring",
-        back="Moonlight Cape",waist="Flume Belt +1",legs="Meg. Chausses +2",feet="Meg. Jam. +2"}
+        body="Meg. Cuirie +1",hands="Malignance Gloves",ring1="Defending Ring",ring2="Dark Ring",
+        back="Moonlight Cape",waist="Flume Belt +1",legs="Meg. Chausses +2",feet="Meg. Jam. +1"}
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = {}
@@ -234,12 +229,12 @@ function init_gear_sets()
     sets.midcast.RA = {ammo=gear.RAbullet,
         head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",
         body="Nisroch Jerkin",hands="Carmine Fin. Ga. +1",ring1="Crepuscular Ring",ring2="Ilabrat Ring",
-        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Adhemar Kecks",feet="Meg. Jam. +2"}
+        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Adhemar Kecks",feet="Meg. Jam. +1"}
 
     sets.midcast.RA.Acc = {ammo=gear.RAbullet,
         head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",
         body="Laksa. Frac +3",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Dingir Ring",
-        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Laksa. Trews +3",feet="Meg. Jam. +2"}
+        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Laksa. Trews +3",feet="Meg. Jam. +1"}
 		
 	sets.buff['Triple Shot'] = {body="Chasseur's Frac +1"}
     
@@ -316,13 +311,13 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {
-		head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-		hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
+		head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
 		waist="Windbuffet Belt +1",left_ear="Suppanomimi",right_ear="Telos Earring",left_ring="Chirich Ring +1",right_ring="Chirich Ring +1"}
     
     sets.engaged.Acc = {
-		head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-		hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
+		head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
 		waist="Windbuffet Belt +1",left_ear="Suppanomimi",right_ear="Telos Earring",left_ring="Chirich Ring +1",right_ring="Chirich Ring +1"}
 		
     sets.engaged.DT = {
@@ -331,18 +326,18 @@ function init_gear_sets()
 		waist="Windbuffet Belt +1",left_ear="Suppanomimi",right_ear="Telos Earring",left_ring="Defending Ring",right_ring="Chirich Ring +1"}
     
     sets.engaged.Acc.DT = {
-        head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-		hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
+        head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
 		waist="Windbuffet Belt +1",left_ear="Suppanomimi",right_ear="Telos Earring",left_ring="Chirich Ring +1",right_ring="Chirich Ring +1"}
 
     sets.engaged.DW = {
-		head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-		hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
+		head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
 		waist="Windbuffet Belt +1",left_ear="Suppanomimi",right_ear="Telos Earring",left_ring="Chirich Ring +1",right_ring="Chirich Ring +1"}
     
     sets.engaged.DW.Acc = {
-		head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-		hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
+		head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
 		waist="Windbuffet Belt +1",left_ear="Suppanomimi",right_ear="Telos Earring",left_ring="Chirich Ring +1",right_ring="Chirich Ring +1"}
 		
     sets.engaged.DW.DT = sets.engaged.DT--{
@@ -351,7 +346,7 @@ function init_gear_sets()
 		--waist="Windbuffet Belt +1",left_ear="Suppanomimi",right_ear="Telos Earring",left_ring="Chirich Ring +1",right_ring="Chirich Ring +1"}
     
     sets.engaged.DW.Acc.DT = {
-        head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-		hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
+        head="Malignance Chapeau",body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},legs="Meg. Chausses +2",feet="Malignance Boots",neck="Iskur Gorget",
 		waist="Windbuffet Belt +1",left_ear="Suppanomimi",right_ear="Telos Earring",left_ring="Chirich Ring +1",right_ring="Chirich Ring +1"}
 end

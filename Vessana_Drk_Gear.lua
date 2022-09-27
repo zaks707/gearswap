@@ -117,7 +117,8 @@ function init_gear_sets()
     sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
-    sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {neck="Abyssal Beads +2",ring1="Titan Ring +1",waist="Sailfi Belt +1",head="Sakpata's Helm"})
+    sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {neck="Abyssal Beads +2",ring1="Titan Ring +1",waist="Sailfi Belt +1",head="Sakpata's Helm",
+		back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}})
     sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})

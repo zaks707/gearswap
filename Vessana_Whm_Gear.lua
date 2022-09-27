@@ -54,7 +54,7 @@ function init_gear_sets()
     -- Fast cast sets for spells
     sets.precast.FC = {--[[main="C. Palug Hammer",sub="Chanter's Shield",--]]ammo="Impatiens",
 		head="Vanya Hood",neck="Clr. Torque +2",ear1="Loquac. Earring",ear2="Malignance Earring",
-		body="Inyanga Jubbah +1",hands="Gende. Gages",ring1="Prolix Ring",--ring2="Lebeche Ring",
+		body="Inyanga Jubbah +2",hands="Gende. Gages",ring1="Prolix Ring",--ring2="Lebeche Ring",
 		back={ name="Alaunus's Cape", augments={'"Fast Cast"+10',}},waist="Witful Belt",legs="Aya. Cosciales +1",feet="Regal Pumps +1"}
 		
     sets.precast.FC.DT = sets.precast.FC --[[{main=gear.grioavolr_fc_staff,sub="Clerisy Strap +1",ammo="Impatiens",
@@ -143,7 +143,7 @@ function init_gear_sets()
 	
     sets.midcast.FastRecast = {sub="Chanter's Shield",ammo="Hasty Pinion +1",
 		head="Nahtirah Hat",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Malignance Earring",
-		body="Inyanga Jubbah +1",hands="Gende. Gages +1",ring1="Kishar Ring",ring2="Prolix Ring",
+		body="Inyanga Jubbah +2",hands="Gende. Gages +1",ring1="Kishar Ring",ring2="Prolix Ring",
 		back="Swith Cape +1",waist="Witful Belt",legs="Lengo Pants",feet="Regal Pumps +1"}
 		
     -- Cure sets
