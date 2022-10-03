@@ -124,7 +124,7 @@ function init_gear_sets()
 
     sets.precast.RA = {ammo=gear.RAbullet,
         head="Chass. Tricorne +1",
-        body="Laksa. Frac +2",hands="Carmine Fin. Ga. +1",ring1="Crepuscular Ring",
+        body="Laksa. Frac +3",hands="Carmine Fin. Ga. +1",ring1="Crepuscular Ring",
         back=gear.snapshot_jse_back,waist="Impulse Belt",legs="Laksa. Trews +3",feet="Meg. Jam. +1"}
 		
 	sets.precast.RA.Flurry = set_combine(sets.precast.RA, {})
@@ -135,7 +135,7 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
         head="Meghanada Visor +2",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Telos Earring",
-        body="Laksa. Frac +2",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Ifrit Ring +1",
+        body="Laksa. Frac +3",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Ifrit Ring +1",
         back=gear.str_wsd_jse_back,waist="Fotia Belt",legs="Meg. Chausses +2",feet="Lanun Bottes +3"}
 		
     sets.precast.WS.Acc = {
@@ -154,7 +154,7 @@ function init_gear_sets()
 
 	sets.precast.WS['Savage Blade'] = {ammo=gear.WSbullet,
         head="Meghanada Visor +2",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
-        body="Laksa. Frac +2",hands="Meg. Gloves +2",ring1="Shukuyu Ring",ring2="Vehemence Ring",
+        body="Laksa. Frac +3",hands="Meg. Gloves +2",ring1="Shukuyu Ring",ring2="Vehemence Ring",
         back=gear.str_wsd_jse_back,waist="Sailfi Belt +1",legs="Meg. Chausses +2",feet="Lanun Bottes +3"}
 
     sets.precast.WS['Savage Blade'].Acc = {ammo=gear.WSbullet,
@@ -164,7 +164,7 @@ function init_gear_sets()
 	
     sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
         head="Lanun Tricorne +3",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
-        body="Laksa. Frac +2",hands="Chasseur's Gants +2",ring1="Dingir Ring",ring2="Garuda Ring",
+        body="Laksa. Frac +3",hands="Chasseur's Gants +2",ring1="Dingir Ring",ring2="Garuda Ring",
         back=gear.ranger_wsd_jse_back,waist="Fotia Belt",legs="Meg. Chausses +2",feet="Lanun Bottes +3"}
 		
     sets.precast.WS['Detonator'] = sets.precast.WS['Last Stand']

@@ -94,7 +94,7 @@ function init_gear_sets()
 	sets.precast.FC = {--[[main="Vampirism",sub="Vampirism",--]]ammo="Impatiens",
 		head="Herculean Helm",--[[neck="Voltsurge Torque",--]]ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
 		body="Amalric Doublet +1",hands="Malignance Gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		--[[back="Perimede Cape",--]]waist="Witful Belt",legs="Aya. Coscialed +1",feet="Malignance Boots"}
+		--[[back="Perimede Cape",--]]waist="Witful Belt",legs="Aya. Cosciales +1",feet="Malignance Boots"}
 
 	sets.precast.FC.Utsusemi = {}--set_combine(sets.precast.FC, {body="Passion Jacket"})
 
@@ -192,7 +192,7 @@ function init_gear_sets()
 
 	-- Physical Spells --
 
-	sets.midcast['Blue Magic'].Physical = {main="Naegling",sub="Hep. Sapara +1",ammo="Aurgelmir Orb",
+	sets.midcast['Blue Magic'].Physical = {ammo="Aurgelmir Orb",
 		head="Adhemar bonnet +1",neck="Mirage Stole +2",ear1="Odr Earring",ear2="Mache Earring +1",
 		body="Adhemar Jacket +1",hands="Herculean Gloves",ring1="Stikini Ring +1",ring2="Stikini Ring",
 		back=gear.wsd_jse_back,waist="Cuchulain's Belt",legs="Jhakri Slops +1",feet="Jhakri Pigaches +1"}
@@ -249,10 +249,10 @@ function init_gear_sets()
 
 	-- Magical Spells --
 
-	sets.midcast['Blue Magic'].Magical = {main="Maxentius",sub="Nibiru Cudgel",ammo="Ombre Tathlum +1",
+	sets.midcast['Blue Magic'].Magical = {ammo="Ombre Tathlum +1",
 		 head="Jhakri Coronal +1",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Enchntr. Earring +1",
 		 body="Jhakri Robe +2",hands="Jhakri Cuffs +2",ring1="Jhakri Ring",ring2="Stikini Ring +1",
-		 back=gear.nuke_jse_back,waist="Salire Belt",legs="Amalric Slops +1",feet="Jhakri Pigaches +1"}
+		 back=gear.nuke_jse_back,waist="Orpheus's Sash",legs="Amalric Slops +1",feet="Jhakri Pigaches +1"}
 					 
 	sets.midcast['Blue Magic'].Magical.Proc = sets.midcast['Blue Magic'].Magical--[[{ammo="Hasty Pinion +1",
 		head="Carmine Mask +1",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
@@ -272,7 +272,7 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'].MagicalVit = set_combine(sets.midcast['Blue Magic'].Magical, {})
 	sets.midcast['Blue Magic'].MagicalDex = set_combine(sets.midcast['Blue Magic'].Magical, {})
 
-	sets.midcast['Blue Magic'].MagicAccuracy = {main="Naegling",sub="Maxentius",ammo="Ombre Tathlum +1",
+	sets.midcast['Blue Magic'].MagicAccuracy = {ammo="Ombre Tathlum +1",
 		head="Malignance Chapeau",neck="Mirage Stole +2",ear1="Friomisi Earring",ear2="Enchntr. Earring +1",
 		body="Malignance Tabard",hands="Malignance Gloves",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
 		back=gear.nuke_jse_back,waist="Salire Belt",legs="Malignance Tights",feet="Malignance Boots"}
@@ -400,7 +400,7 @@ function init_gear_sets()
 	sets.Learning = {hands="Assim. Bazu. +1"}
 
 	-- Resting sets
-	sets.resting = {main="Bolelabunga",sub="Genmei Shield",ammo="Falcon Eye",
+	sets.resting = {ammo="Falcon Eye",
 			      head="Rawhide Mask",neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
 			      body="Jhakri Robe +2",hands=gear.herculean_refresh_hands,ring1="Defending Ring",ring2="Sheltered Ring",
 			      back="Bleating Mantle",waist="Flume Belt +1",legs="Lengo Pants",feet=gear.herculean_refresh_feet}
@@ -415,7 +415,7 @@ function init_gear_sets()
 
 	sets.idle.PDT = {--[[main="Mafic Cudgel",sub="Genmei Shield",--]]ammo="Staunch Tathlum",
 				head="Malignance Chapeau",--neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
-		        body="Jhakri Robe +2",hands="Malignance Gloves",ring1="Defending Ring",--ring2="Dark Ring",
+		        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",--ring2="Dark Ring",
 				--[[back="Moonlight Cape",--]]waist="Flume Belt +1",legs="Malignance Tights",feet="Malignance Boots"}
 
 	sets.idle.DTHippo = set_combine(sets.idle.PDT, {legs="Carmine Cuisses +1"})--,feet="Hippo. Socks +1"})
@@ -463,9 +463,10 @@ function init_gear_sets()
 	-- Engaged sets
 
 	sets.engaged = {ammo="Aurgelmir Orb",
-			    head="Adhemar Bonnet +1",neck="Mirage Stole +2",ear1="Cessance Earring",ear2="Brutal Earring",
-			    body="Adhemar Jacket +1",hands="Adhemar Wrist. +1",ring1="Chirich Ring +1",ring2="Chirich Ring +1",
-			    back=gear.da_jse_back,waist="Windbuffet Belt +1",legs="Herculean Trousers",feet="Herculean Boots"}
+			    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},neck="Mirage Stole +2",ear1="Telos Earring",ear2="Suppanomimi",
+			    body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+				ring1="Chirich Ring +1",ring2="Chirich Ring +1",
+			    back=gear.da_jse_back,waist="Sailfi Belt +1",legs="Samnuha Trousers",feet={ name="Herculean Boots", augments={'Accuracy+11 Attack+11','DEX+10','Accuracy+12','Attack+14',}}}
 
 	--[[sets.engaged.AM = {main="Tizona",sub="Almace",ammo="Aurgelmir Orb +1",
 			    head="Dampening Tam",neck="Mirage Stole +2",ear1="Cessance Earring",ear2="Telos Earring",
