@@ -149,7 +149,8 @@ function init_gear_sets()
 	sets.precast.WS['Chant du Cygne'].DT = set_combine(sets.precast.WS.DT, {back=gear.crit_jse_back})
 	sets.precast.WS['Chant du Cygne'].Fodder = set_combine(sets.precast.WS['Chant du Cygne'], {})
 
-	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {ear1="Moonshade Earring",ear2="Brutal Earring",body="Herculean Vest",hands="Jhakri Cuffs +2",ring1="Chirich Ring +1",ring2="Chirich Ring +1",back=gear.wsd_jse_back,waist="Dynamic Belt",feet="Herculean Boots"})
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {ear1="Moonshade Earring",ear2="Brutal Earring",body="Herculean Vest",hands="Jhakri Cuffs +2",ring1="Chirich Ring +1",
+		ring2="Chirich Ring +1",back=gear.wsd_jse_back,legs="Luhlaza Shalwar +3",waist="Dynamic Belt",feet="Herculean Boots"})
 	sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {ear1="Moonshade Earring",hands="Jhakri Cuffs +2",back=gear.wsd_jse_back,waist="Dynamic Belt",feet="Herculean Boots"})
 	sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Savage Blade'].DT = set_combine(sets.precast.WS.DT, {back=gear.wsd_jse_back})
@@ -252,7 +253,7 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'].Magical = {ammo="Ombre Tathlum +1",
 		 head="Jhakri Coronal +1",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Enchntr. Earring +1",
 		 body="Jhakri Robe +2",hands="Jhakri Cuffs +2",ring1="Jhakri Ring",ring2="Stikini Ring +1",
-		 back=gear.nuke_jse_back,waist="Orpheus's Sash",legs="Amalric Slops +1",feet="Jhakri Pigaches +1"}
+		 back=gear.nuke_jse_back,waist="Orpheus's Sash",legs="Luhlaza Shalwar +3",feet="Jhakri Pigaches +1"}
 					 
 	sets.midcast['Blue Magic'].Magical.Proc = sets.midcast['Blue Magic'].Magical--[[{ammo="Hasty Pinion +1",
 		head="Carmine Mask +1",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
