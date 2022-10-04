@@ -144,7 +144,7 @@ function init_gear_sets()
 	sets.precast.WS['Realmrazer'].Fodder = set_combine(sets.precast.WS['Realmrazer'], {})
 
 	sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {ammo="Jukukik Feather",head="Adhemar Bonnet +1",neck="Mirage Stole +2",ear1="Moonshade Earring",ear2="Odr Earring",
-		body="Gleti's Cuirass",hands="Gleti's Gauntlets",back=gear.crit_jse_back},legs="Gleti's Breeches",feet="Gleti's Boots")
+		body="Gleti's Cuirass",hands="Gleti's Gauntlets",back=gear.crit_jse_back,legs="Gleti's Breeches",feet="Gleti's Boots"})
 	sets.precast.WS['Chant du Cygne'].Acc = set_combine(sets.precast.WS.Acc, {ear1="Moonshade Earring",ear2="Odr Earring",back=gear.crit_jse_back,legs="Carmine Cuisses +1"})
 	sets.precast.WS['Chant du Cygne'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Chant du Cygne'].DT = set_combine(sets.precast.WS.DT, {back=gear.crit_jse_back})
