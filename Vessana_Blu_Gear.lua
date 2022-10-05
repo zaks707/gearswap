@@ -12,11 +12,11 @@ function user_job_setup()
 
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None','MP','SuppaBrutal','DWEarrings','DWMax'}
 
-	gear.crit_jse_back = {name="Rosmerta's Cape",augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}}
+	gear.crit_jse_back = {name="Rosmerta's Cape",augments={'STR+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
 	gear.da_jse_back = gear.crit_jse_back --{name="Rosmerta's Cape",augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}
 	gear.stp_jse_back =gear.crit_jse_back --{name="Rosmerta's Cape",augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}}
 	gear.wsd_jse_back = gear.crit_jse_back --{name="Rosmerta's Cape",augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
-	gear.nuke_jse_back = "Aput Mantle"--{name="Rosmerta's Cape",augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
+	gear.nuke_jse_back = {name="Rosmerta's Cape",augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
 
 	gear.obi_cure_waist = "Salire Belt"
 	gear.obi_nuke_waist = "Salire Belt"
@@ -252,9 +252,9 @@ function init_gear_sets()
 
 	-- Magical Spells --
 
-	sets.midcast['Blue Magic'].Magical = {ammo="Ombre Tathlum +1",
-		 head="Jhakri Coronal +1",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Enchntr. Earring +1",
-		 body="Jhakri Robe +2",hands="Jhakri Cuffs +2",ring1="Jhakri Ring",ring2="Stikini Ring +1",
+	sets.midcast['Blue Magic'].Magical = {ammo="Ghastly	Tathlum +1",
+		 neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Regal Earring",
+		 body="Cohort Cloak +1",hands="Jhakri Cuffs +2",ring1="Jhakri Ring",ring2="Acumen Ring",
 		 back=gear.nuke_jse_back,waist="Orpheus's Sash",legs="Luhlaza Shalwar +3",feet="Jhakri Pigaches +1"}
 					 
 	sets.midcast['Blue Magic'].Magical.Proc = sets.midcast['Blue Magic'].Magical--[[{ammo="Hasty Pinion +1",
@@ -410,16 +410,16 @@ function init_gear_sets()
 
 	-- Idle sets
 	sets.idle = {--[[main="Bolelabunga",sub="Genmei Shield",--]]ammo="Staunch Tathlum",
-			      --head="Rawhide Mask",neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
-			      body="Jhakri Robe +2",--[[hands="Herculean Gloves",--]]ring1="Stikini Ring +1",ring2="Stikini Ring +1",
-			      back="Rosmerta's Cape",waist="Flume Belt +1"}--,legs="Lengo Pants",feet=gear.herculean_refresh_feet}
+			      head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
+			      body="Jhakri Robe +2",hands="Nyame Gauntlets",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
+			      back="Rosmerta's Cape",waist="Flume Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
 	--sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
 
 	sets.idle.PDT = {--[[main="Mafic Cudgel",sub="Genmei Shield",--]]ammo="Staunch Tathlum",
-				head="Malignance Chapeau",--neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
-		        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",--ring2="Dark Ring",
-				--[[back="Moonlight Cape",--]]waist="Flume Belt +1",legs="Malignance Tights",feet="Malignance Boots"}
+				head="Nyame Helm",--neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
+		        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",--ring2="Dark Ring",
+				--[[back="Moonlight Cape",--]]waist="Flume Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
 	sets.idle.DTHippo = set_combine(sets.idle.PDT, {legs="Carmine Cuisses +1"})--,feet="Hippo. Socks +1"})
 
@@ -455,11 +455,11 @@ function init_gear_sets()
 	-- Weapons sets
 	--sets.weapons.Tizalmace = {main="Tizona",sub="Almace"}
 	--sets.weapons.Tizbron = {main="Tizona",sub="Thibron"}
-	sets.weapons.MeleeClubs = {main="Maxentius",sub="Nibiru Cudgel"}
+	sets.weapons.MeleeClubs = {main="Maxentius",sub="Bunzi's Rod"}
 	--sets.weapons.Almace = {main="Almace",sub="Sequence"}
 	sets.weapons.Naegling = {main="Naegling",sub="Hep. Sapara +1"}
 	--sets.weapons.Naegmace = {main="Naegling",sub="Almace"}
-	sets.weapons.MagicWeapons = {main="Maxentius",sub="Nibiru Cudgel"}
+	sets.weapons.MagicWeapons = {main="Maxentius",sub="Bunzi's Rod"}
 	--sets.weapons.MaccWeapons = {main="Iris",sub="Iris"}
 	--sets.weapons.HybridWeapons = {main="Vampirism",sub="Vampirism"}
 
