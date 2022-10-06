@@ -254,8 +254,8 @@ function init_gear_sets()
 
 	sets.midcast['Blue Magic'].Magical = {ammo="Ghastly	Tathlum +1",
 		 neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Regal Earring",
-		 body="Cohort Cloak +1",hands="Jhakri Cuffs +2",ring1="Jhakri Ring",ring2="Acumen Ring",
-		 back=gear.nuke_jse_back,waist="Orpheus's Sash",legs="Luhlaza Shalwar +3",feet="Jhakri Pigaches +1"}
+		 body="Cohort Cloak +1",hands="Hashi. Bazu +2",ring1="Jhakri Ring",ring2="Acumen Ring",
+		 back=gear.nuke_jse_back,waist="Orpheus's Sash",legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
 					 
 	sets.midcast['Blue Magic'].Magical.Proc = sets.midcast['Blue Magic'].Magical--[[{ammo="Hasty Pinion +1",
 		head="Carmine Mask +1",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
@@ -469,7 +469,7 @@ function init_gear_sets()
 			    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},neck="Mirage Stole +2",ear1="Telos Earring",ear2="Suppanomimi",
 			    body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 				ring1="Chirich Ring +1",ring2="Chirich Ring +1",
-			    back=gear.da_jse_back,waist="Sailfi Belt +1",legs="Samnuha Trousers",feet={ name="Herculean Boots", augments={'Accuracy+11 Attack+11','DEX+10','Accuracy+12','Attack+14',}}}
+			    back=gear.da_jse_back,waist="Sailfi Belt +1",legs="Samnuha Tights",feet={ name="Herculean Boots", augments={'Accuracy+11 Attack+11','DEX+10','Accuracy+12','Attack+14',}}}
 
 	--[[sets.engaged.AM = {main="Tizona",sub="Almace",ammo="Aurgelmir Orb +1",
 			    head="Dampening Tam",neck="Mirage Stole +2",ear1="Cessance Earring",ear2="Telos Earring",
