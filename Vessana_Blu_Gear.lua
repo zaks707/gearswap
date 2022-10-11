@@ -254,7 +254,7 @@ function init_gear_sets()
 
 	sets.midcast['Blue Magic'].Magical = {ammo="Ghastly	Tathlum +1",
 		 neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Regal Earring",
-		 body="Cohort Cloak +1",hands="Hashi. Bazu +2",ring1="Jhakri Ring",ring2="Acumen Ring",
+		 body="Cohort Cloak +1",hands="Hashi. Bazu. +2",ring1="Jhakri Ring",ring2="Acumen Ring",
 		 back=gear.nuke_jse_back,waist="Orpheus's Sash",legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
 					 
 	sets.midcast['Blue Magic'].Magical.Proc = sets.midcast['Blue Magic'].Magical--[[{ammo="Hasty Pinion +1",
